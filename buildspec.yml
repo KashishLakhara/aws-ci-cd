@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      node: 21.7.0
+  pre_build:
+    commands:
+      - npm install
+  build: 
+    commands:
+      - echo "Building Docker Image"
+      - docker build -t "<>"
+      - docker push <>
+  post_build:
+    commands:
+      - echo "Build is successful"  
+      
